@@ -56,7 +56,10 @@ const moduleConfig = () => ({
       use: [
         createLoader('cache'),
         createLoader('vue'),
-        path.resolve(__dirname, 'loaders', 'markdown-loader/index.js')
+        // path.resolve(__dirname, 'loaders', 'markdown-loader/index.js')
+        {
+          loader: path.resolve(__dirname, 'loaders', 'markdown-loader/index.js')
+        }
       ],
     },
   ]

@@ -30,7 +30,7 @@ const options = {
   allowedHosts: config.dev.allowedHosts,
   proxy: config.dev.proxy
 };
-// console.log(webpackDevConfig)
+// console.log(1111, JSON.stringify(webpackDevConfig)  )
 
 const compiler = webpack(webpackDevConfig);
 

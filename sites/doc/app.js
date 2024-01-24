@@ -7,7 +7,7 @@ import {
   Menu, MenuItem, Submenu, Dialog, Link, Message 
 } from 'element-ui';
 import Scrollbar from 'element-ui/lib/scrollbar';
-import Richtext from '@ueip/gear-vue/lib/richtext';
+import Richtext from '../../src/packages/richtext';
 import App from './app.vue';
 import router from './router';
 
@@ -23,7 +23,7 @@ import { isMobile, demoUrl } from './asset/js/utils.js';
 
 import 'element-ui/lib/theme-chalk/scrollbar.css';
 
-import '@ueip/gear-vue/lib/richtext/index.css';
+import '../../src/packages/richtext/index.scss';
 
 backtop.install(Vue);
 

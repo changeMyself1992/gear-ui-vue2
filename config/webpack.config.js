@@ -31,8 +31,8 @@ module.exports = {
     // devServer 配置
     useLocalIp: false,
     // host: '0.0.0.0',ƒ
-    host: 'dev.jr.jd.com',
-    port: 8080,
+    host: 'localhost',
+    port: 9527,
     // staticDir: path.resolve(__dirname, `../dist/${buildConfig.basePath}`),
     staticDir: path.resolve(__dirname, '../sites/demo/'),
     compress: true,

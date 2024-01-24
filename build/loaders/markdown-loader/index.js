@@ -1,5 +1,5 @@
 const path = require('path');
-const loaderUtils = require('loader-utils');
+const loaderUtils = require('loader-utils');// 这个库用来获取传入的参数
 const parser = require('./md-parser');
 
 // 设计要求更新日志要定制样式...........
