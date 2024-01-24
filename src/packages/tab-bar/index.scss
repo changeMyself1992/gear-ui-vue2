@@ -1,0 +1,54 @@
+@import "../../assets/css/common/var";
+
+.gear-tab-bar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    width: 100%;
+
+    .gear-tab-item {
+        flex: 1;
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        height: 50px;
+        padding-top: 6px;
+        box-sizing: border-box;
+    }
+
+    .gear-badge__wrapper {
+        font-size: 0;
+    }
+
+    .gear-tab-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .gear-tab-text {
+        color: #666666;
+        font-size: 11px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+    }
+
+    .on {
+        color: $blackTheme1;
+    }
+
+    .tab-badge {
+        position: absolute;
+    }
+
+    .child-content {
+        width: 10px;
+        height: 10px;
+    }
+}

@@ -1,0 +1,234 @@
+:root {
+  --gear-loading-font-size: 12px;
+  --gear-loading-color: #fff;
+}
+
+.gear-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+
+  &__wrap {
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(51, 51, 51, 0.9);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // transform: scale(3);
+  }
+
+  &__con {
+    width: 76px;
+    height: 76px;
+  }
+
+  &__animation {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__joy {
+    width: 44px;
+    height: 23px;
+    position: relative;
+
+    &--box {
+      width: 58px;
+      height: 58px;
+      position: relative;
+    }
+
+    &--icon {
+      width: 15px;
+      height: 15px;
+      top: 14px;
+      position: absolute;
+      left: 50%;
+      margin-left: -7.5px;
+      animation: ani-icon 0.7s 0.15s linear infinite;
+      transform-origin: center bottom;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url(./img/img_2.png) 0 0/15px auto no-repeat;
+        animation: ani-icon2 0.7s 0.15s linear infinite;
+      }
+    }
+
+    &--body {
+      width: 47px;
+      height: 24px;
+      background: url(./img/img_1.png) 0 0/47px auto no-repeat;
+      position: absolute;
+      left: 50%;
+      margin-left: -23px;
+      top: 30px;
+      animation: ani-body 0.7s linear infinite;
+    }
+
+    &--other {
+      position: relative;
+      animation: ani-other 0.7s linear infinite;
+    }
+
+    &--eye {
+      width: 4px;
+      height: 2px;
+      border-radius: 50%;
+      background: #4d4d4d;
+      position: absolute;
+      top: 5.5px;
+      left: 13px;
+      transform: rotate(-75deg);
+      animation: ani-eye-l 0.7s linear infinite;
+    }
+
+    &--eye-r {
+      left: auto;
+      right: 13px;
+      transform: rotate(75deg);
+      animation: ani-eye-r 0.7s linear infinite;
+    }
+
+    &--nose {
+      width: 7px;
+      height: 2.5px;
+      border-radius: 50%;
+      background: #4d4d4d;
+      position: absolute;
+      left: 50%;
+      margin-left: -3.5px;
+      transform: scale(1.1, 0.9);
+      top: 8px;
+    }
+
+    &--mouth {
+      width: 17px;
+      height: 5px;
+      background: url(./img/img_0.png) 0 0/17px auto no-repeat;
+      position: absolute;
+      left: 50%;
+      margin-left: -8.5px;
+      top: 11px;
+    }
+  }
+
+  &__text {
+    line-height: 17px;
+    background: none;
+    border: none;
+    font-size: var(--gear-loading-font-size);
+    color: var(--gear-loading-color);
+    margin-top: 2px;
+  }
+}
+
+@keyframes ani-body {
+
+  0%,
+  10%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes ani-other {
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  35% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes ani-eye-l {
+
+  0%,
+  70%,
+  100% {
+    transform: rotate(-75deg) scale(1, 1.2);
+  }
+
+  30% {
+    transform: rotate(-75deg) scale(0.7, 1.2);
+  }
+}
+
+@keyframes ani-eye-r {
+
+  0%,
+  70%,
+  100% {
+    transform: rotate(75deg) scale(1, 1.2);
+  }
+
+  30% {
+    transform: rotate(75deg) scale(0.7, 1.2);
+  }
+}
+
+@keyframes ani-icon {
+  0% {
+    animation-timing-function: ease;
+    transform: scale(1) translateY(0);
+  }
+
+  15% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+
+  30% {
+    animation-timing-function: ease-out;
+    transform: scale(0.9, 1.1) translateY(-5.5px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: scale(1.05, 0.95) translateY(-11px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes ani-icon2 {
+
+  0%,
+  10% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}

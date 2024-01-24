@@ -1,0 +1,31 @@
+.gear-fade {
+    &-enter-active,
+    &-enter-to {
+        animation: 0.04s van-fade-in both ease-out;
+    }
+
+    &-leave-active,
+    &-leave-to {
+        animation: 0.16s van-fade-out both ease-in;
+    }
+}
+
+@keyframes van-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes van-fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

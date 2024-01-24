@@ -1,0 +1,260 @@
+// BEM规范，为的是结束混乱的命名方式，达到一个语义化的CSS命名方式。
+// BEM是三个单词的缩写：Block（块）代表更高级别的抽象或组件，Element（元素） Block的后代，以及Modifier（修饰） 不同状态的修饰符。
+// & 语法代表父选择器,sass在选择器嵌套上是非常智能的，即使是带有父选择器的情况。当sass遇到群组选择器（由多个逗号分隔开的选择器形成）也能完美地处理这种嵌套。
+// --modifier 是修饰的意思
+// __wrap 是块级元素的意思
+@import "../../assets/css/common/mixin";
+@import '../../assets/css/common/var';
+
+.gear-step {
+    position: relative;
+
+    &__horizontal {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 0;
+
+        &__index {
+            position: relative;
+            width: 19px;
+            height: 19px;
+
+            font-family: PingFangSC-Regular;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 19px;
+            border-radius: 50%;
+            text-align: center;
+
+            z-index: 10;
+
+            span {
+                vertical-align: middle;
+            }
+
+            &--wait {
+                background-color: #DDDDDD;
+                color: #fff;
+            }
+
+            &--process {
+                background-image: url(https://img13.360buyimg.com/imagetools/jfs/t1/107118/40/16285/309/6385c7d4Eaa141cd3/ea1c1f57c45eba2f.png);
+                background-size: 22px 22px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: #fff;
+                border: 1px solid $blackTheme1;
+            }
+
+            &--finish {
+                background-color: $redTheme;
+                color: #fff;
+            }
+
+            &--error {
+                background-image: url(https://img12.360buyimg.com/imagetools/jfs/t1/166525/35/32492/276/6385c7a6E564e01db/2874ac5b0110a6d8.png);
+                background-size: 22px 22px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: #fff;
+                border: 1px solid $redTheme;
+            }
+        }
+
+        &__title {
+            line-height: 17px;
+            font-size: 12px;
+            font-family: PingFangSC-Regular;
+            font-weight: normal;
+
+            text-align: center;
+            margin-top: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+
+            &--wait {
+                color: #999999;
+            }
+
+            &--process {
+                color: #666666;
+            }
+
+            &--finish {
+                color: #666666;
+            }
+
+            &--error {
+                color: $redTheme;
+            }
+        }
+
+        &__line {
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: 9.5px;
+            right: -50%;
+            z-index: 9;
+
+            &--wait {
+                background-color: #DDDDDD;
+            }
+
+            &--finish {
+                background-color: $redTheme;
+            }
+        }
+
+
+    }
+
+    &:last-child {
+        .gear-step__horizontal__line {
+            display: none;
+        }
+
+        .gear-step__vertical__line {
+            display: none;
+        }
+
+        .gear-step__vertical {
+            margin-bottom: 0;
+        }
+    }
+
+    &__vertical {
+        position: relative;
+        margin-bottom: 12px;
+        padding-left: 28px;
+
+        &__title {
+            line-height: 20px;
+            font-size: 14px;
+            font-family: PingFangSC-Regular;
+            font-weight: normal;
+
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            margin-bottom: 2px;
+
+            &--wait {
+                color: #999999;
+            }
+
+            &--process {
+                color: $blackTheme1;
+            }
+
+            &--finish {
+                color: $blackTheme1;
+            }
+
+            &--error {
+                color: $redTheme;
+            }
+        }
+
+        &__description {
+            line-height: 17px;
+            font-size: 12px;
+            font-family: PingFangSC-Regular;
+            font-weight: normal;
+
+            text-align: left;
+            width: 100%;
+
+            &--wait {
+                color: #999999;
+            }
+
+            &--process {
+                color: #999999;
+            }
+
+            &--finish {
+                color: #999999;
+            }
+
+            &--error {
+                color: $redTheme;
+            }
+        }
+
+        &__circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            box-sizing: border-box;
+
+            &--wait {
+                border: 1px solid #999999;
+                text-align: center;
+                line-height: 20px;
+                font-size: 13px;
+                font-family: JR-UDC;
+                font-weight: normal;
+                background-color: #fff;
+                color: #999999;
+            }
+
+            &--process {
+                background-image: url(https://img13.360buyimg.com/imagetools/jfs/t1/107118/40/16285/309/6385c7d4Eaa141cd3/ea1c1f57c45eba2f.png);
+                background-size: 20px 20px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: #fff;
+                border: 1px solid $blackTheme1;
+            }
+
+            &--finish {
+                background-image: url(https://img13.360buyimg.com/imagetools/jfs/t1/140511/7/31483/469/6385c7c8E114b0f42/571d362dbe7fedef.png);
+                background-size: 20px 20px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: #fff;
+                border: 1px solid #3DC071;
+            }
+
+            &--error {
+                background-image: url(https://img12.360buyimg.com/imagetools/jfs/t1/166525/35/32492/276/6385c7a6E564e01db/2874ac5b0110a6d8.png);
+                background-size: 20px 20px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: #fff;
+                border: 1px solid $redTheme;
+            }
+        }
+
+        &__line {
+            width: 1px;
+            position: absolute;
+            left: 9.5px;
+            top: 20px;
+            height: 100%;
+            z-index: 9;
+
+            &--wait {
+                background-color: #CCCCCC;
+            }
+
+            &--finish {
+                background-color: #55C782;
+            }
+        }
+    }
+
+
+}

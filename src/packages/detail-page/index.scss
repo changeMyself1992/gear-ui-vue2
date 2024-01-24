@@ -1,0 +1,38 @@
+$gear-switch-disable-color: #b9d1f8;
+@import '../../assets/css/common/var';
+
+
+.gear-detail-Page {
+    position: relative;
+    width: 100%;
+    padding: 16px 16px 0 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &__pageItem {
+        margin-bottom: 16px;
+        overflow: hidden;
+
+        &:last-child {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__title {
+        line-height: 23px;
+        font-size: 16px;
+        font-family: PingFangSC-Medium;
+        font-weight: bold;
+        color: $blackTheme2;
+        margin-bottom: 9px;
+    }
+
+    &__paragraphItem {
+        line-height: 21px;
+        font-size: 14px;
+        font-family: PingFangSC-Regular;
+        font-weight: normal;
+        color: $blackTheme3;
+        text-align: justify;
+    }
+}

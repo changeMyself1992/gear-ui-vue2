@@ -1,0 +1,117 @@
+@charset "utf-8";
+@import "../../assets/css/common/var";
+@import "../../assets/css/common/mixin";
+
+.gear-button {
+    display: inline-block;
+    font-family: PingFangSC-Medium;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+
+    &-large {
+        height: 50px;
+        width: calc(100vw - 36px);
+        line-height: 50px;
+        padding: 0 25px;
+        font-size: 18px;
+    }
+
+    &-medium {
+        height: 44px;
+        width: auto;
+        line-height: 44px;
+        padding: 0 22px;
+        font-size: 16px;
+    }
+
+    &-small {
+        height: 30px;
+        min-width: 80px;
+        line-height: 30px;
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    &-smallest {
+        height: 26px;
+        min-width: 72px;
+        line-height: 26px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    // 按钮的type样式块*****stat*****
+    &-short.gear-button-large,
+    &-short.gear-button-medium,
+    &-short.gear-button-small,
+    &-short.gear-button-smallest {
+        background-color: $redTheme;
+        border-radius: 999px;
+        color: #ffffff;
+        font-family: PingFangSC-Medium;
+    }
+
+    &-short:active {
+        background-color: #D6392E;
+    }
+
+    &-white.gear-button-large,
+    &-white.gear-button-medium,
+    &-white.gear-button-small,
+    &-white.gear-button-smallest {
+        border-radius: 999px;
+        background: transparent;
+        // @include gear-border-1px($redTheme, 999px, 1px);
+        border: 1px solid $redTheme;
+        color: $redTheme;
+        font-family: PingFangSC-Semibold;
+    }
+
+    &-white:active {
+        background: rgba(239, 64, 52, 0.1);
+    }
+
+    &-white-normal.gear-button-large,
+    &-white-normal.gear-button-medium,
+    &-white-normal.gear-button-small,
+    &-white-normal.gear-button-smallest {
+        border-radius: 999px;
+        background: transparent;
+        // @include gear-border-1px(#cccccc, 999px, 1px);
+        border: 1px solid #cccccc;
+        color: #666;
+        font-family: PingFangSC-Semibold;
+    }
+
+    &-white-normal:active {
+        background: rgba(204, 204, 204, 0.2);
+    }
+
+    &-text.gear-button-large,
+    &-text.gear-button-medium,
+    &-text.gear-button-small,
+    &-text.gear-button-smallest {
+        width: auto;
+        min-width: auto;
+        max-width: auto;
+        padding: 0;
+        background: transparent;
+        color: #666;
+        font-family: PingFangSC-Medium;
+    }
+
+    &-text:active {
+        opacity: 0.8;
+    }
+
+    &-disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+    }
+
+    // 按钮的type样式块*****end*****
+}

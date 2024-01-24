@@ -1,0 +1,66 @@
+@import "./animate.scss";
+
+:root {
+  --g-pull-refresh-head-color: #666;
+  --g-pull-refresh-head-font-size: 12px;
+}
+
+
+.gear-pull-refresh {
+  overflow: hidden;
+  user-select: none;
+
+
+  &__wrap {
+    position: relative;
+    height: 100%;
+    padding-top: 10px;
+
+    &.transition {
+      -webkit-transition: transform .3s linear;
+      transition: transform .3s linear;
+    }
+  }
+
+  &__head {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    &--top {
+      width: 56px;
+      height: 55px;
+      margin: 0 auto 2px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      transform-origin: center bottom;
+
+      &-lottie {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &--txt {
+      text-align: center;
+      color: var(--g-pull-refresh-head-color);
+      font-size: var(--g-pull-refresh-head-font-size);
+      position: relative;
+      top: 0px;
+    }
+
+  }
+
+}

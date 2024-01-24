@@ -1,0 +1,182 @@
+@import '../../assets/font/iconfont.scss';
+@import '../../assets/css/common/var';
+
+.timer-COMP-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+// 文本样式  时：分：秒
+.hh-mm-ss-text-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 22px;
+  font-family: 'UDC-Bold';
+  font-size: 18px;
+  font-weight: normal;
+  color: rgba(51, 51, 51, 1);
+
+  span {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// 文本样式  00 天 00 时 00 分 56 秒
+.dd-hh-mm-ss-text-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 23px;
+  font-family: 'UDC-Bold';
+  font-size: 18px;
+  font-weight: normal;
+  color: rgba(51, 51, 51, 1);
+
+  .text {
+    margin: 0 4px;
+    font-size: 16px;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
+  }
+
+  .seconds {
+    margin-right: 0;
+  }
+}
+
+// 底板样式  底板样式  时：分：秒
+.hh-mm-ss-card-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 18px;
+  font-size: 18px;
+  font-family: 'UDC-Bold';
+  font-weight: normal;
+
+  .num {
+    width: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 12px;
+    background: linear-gradient(180deg, rgba(240, 79, 58, 1) 0%, rgba(253, 129, 89, 1) 100%);
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .symbol {
+    width: 7px;
+    text-align: center;
+  }
+}
+
+// 底板样式  00 天 00 时 00 分 56 秒
+.dd-hh-mm-ss-card-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 18px;
+
+  .num {
+    width: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: 'UDC-Bold';
+    font-weight: normal;
+    background: linear-gradient(180deg, rgba(240, 79, 58, 1) 0%, rgba(253, 129, 89, 1) 100%);
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .text {
+    width: 16px;
+    text-align: center;
+    font-size: 12px;
+    font-family: PingFang SC;
+    font-weight: 600;
+  }
+}
+
+.read-box {
+  position: fixed;
+  left: 12px;
+  bottom: 120px;
+
+  .shape {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: $redTheme;
+
+    .bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 36px;
+      background: rgba(255, 255, 255, 1);
+
+      .left-semicircle {
+        z-index: 1;
+        width: 18px;
+        height: 36px;
+        border-radius: 36px 0 0 36px;
+        transform-origin: right center;
+      }
+
+      .right-semicircle {
+        z-index: 2;
+        width: 18px;
+        height: 36px;
+        border-radius: 0 36px 36px 0;
+        transform-origin: left center;
+      }
+    }
+
+    .circle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4;
+    }
+
+    .cover {
+      z-index: 3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -15px;
+      margin-top: -15px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 30px;
+      background: $redTheme;
+      font-size: 14px;
+      font-family: 'UDC-Bold';
+      font-weight: normal;
+      color: rgba(255, 255, 255, 1);
+
+      .unit {
+        font-size: 12px;
+        transform: scale(0.9);
+        font-family: PingFang SC;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+}

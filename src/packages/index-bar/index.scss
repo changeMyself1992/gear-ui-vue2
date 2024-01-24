@@ -1,0 +1,123 @@
+// BEM规范，为的是结束混乱的命名方式，达到一个语义化的CSS命名方式。
+// BEM是三个单词的缩写：Block（块）代表更高级别的抽象或组件，Element（元素） Block的后代，以及Modifier（修饰） 不同状态的修饰符。
+// & 语法代表父选择器,sass在选择器嵌套上是非常智能的，即使是带有父选择器的情况。当sass遇到群组选择器（由多个逗号分隔开的选择器形成）也能完美地处理这种嵌套。
+// --modifier 是修饰的意思
+// __wrap 是块级元素的意思
+@import "../../assets/css/common/var";
+@import "../../assets/css/common/mixin";
+
+.gear-index-bar {
+    -moz-user-select: none;
+    /* Firefox私有属性 */
+    -webkit-user-select: none;
+    /* WebKit内核私有属性 */
+    -ms-user-select: none;
+    /* IE私有属性(IE10及以后) */
+    -khtml-user-select: none;
+    /* KHTML内核私有属性 */
+    -o-user-select: none;
+    /* Opera私有属性 */
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &__sidebar {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        transform: translateY(-50%);
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &__index {
+        position: relative;
+        padding: 0 4px 2px 16px;
+        box-sizing: content-box;
+        width: 13px;
+        height: 13px;
+        font-weight: normal;
+        font-size: 12px;
+        text-align: center;
+        color: $blackTheme1;
+        font-family: PingFangSC-Regular;
+
+        &--active {
+            color: #FFFFFF;
+            position: relative;
+
+            &::before {
+                content: " ";
+                z-index: -1;
+                background-color: $redTheme;
+                width: 13px;
+                height: 13px;
+                border-radius: 4px;
+                position: absolute;
+                top: 0%;
+                right: 4px;
+            }
+        }
+    }
+
+    &__value {
+        position: absolute;
+        transform: scale(0.8);
+        display: block;
+        width: 13px;
+        height: 13px;
+        top: 0;
+        right: 4px;
+        line-height: 13px;
+    }
+
+    &__card {
+        width: 46px;
+        height: 46px;
+        background: #CCCCCC;
+        border-radius: 8px;
+        font-size: 28px;
+        font-family: PingFangSC-Semibold;
+        font-weight: bold;
+        color: #FFFFFF;
+        line-height: 46px;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 51px;
+
+        &::before {
+            content: " ";
+            border-top: 7px solid;
+            border-right: 8px solid;
+            border-bottom: 7px solid;
+            border-left: 8px solid;
+            border-color: transparent transparent transparent #CCCCCC;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -15px;
+        }
+
+    }
+
+    &__item-text {
+        padding: 17px 0 17px $padding-sm;
+        line-height: 23px;
+        font-size: 16px;
+        font-family: PingFangSC-Semibold;
+        font-weight: bold;
+        color: $blackTheme1;
+        background-color: #FFFFFF;
+
+        &--border-bottom {
+            @include gear-border-bottom($borderColor, 12px, 0);
+        }
+    }
+
+}

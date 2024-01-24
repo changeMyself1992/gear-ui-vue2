@@ -1,0 +1,592 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url(./Gilroy-ExtraBoldItalic.otf);
+}
+
+.doc-cont {
+    h1 {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 10px 0 20px;
+        color: #333333;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 10px 0;
+    }
+
+    h1+p,
+    h1+p+p,
+    h1+p+p {
+        color: #333333;
+    }
+
+    h2 {
+        margin: 30px 0 15px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #333333;
+    }
+
+    h2+p,
+    h2+p+p {
+        color: #3F4449;
+    }
+
+    h3 {
+        margin: 20px 0 10px;
+        font-size: 18px;
+        font-weight: 400;
+        color: #333333;
+    }
+
+    h3+p,
+    h3+p+p {
+        color: #3F4449;
+    }
+
+    h4 {
+        font-size: 14px;
+        font-weight: normal;
+        margin: 15px 0;
+        color: #666666;
+    }
+
+    h4+p,
+    h4+p+p,
+    h4+p+p+p {
+        color: #666666;
+    }
+
+    h4+p::nth-child(n) {
+        color: #666666;
+    }
+
+    blockquote {
+        padding: 0;
+        margin: 0;
+        margin-top: 10px;
+
+        p {
+            margin: 0;
+            display: inline-block;
+            background: rgba(83, 150, 255, 0.14);
+            font-size: 14px;
+            color: #333333;
+            border-radius: 4px;
+            text-decoration-style: none;
+            border-left: 8px solid #5396FF;
+            padding: 15px 54px 15px 22px;
+            line-height: 1.5;
+            overflow: hidden;
+            font-style: normal;
+        }
+    }
+
+    ul {
+        border-radius: 3px;
+        padding: 5px 20px 5px 0;
+        list-style: none;
+
+        p {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            font-size: 14px;
+            color: #455A64;
+            padding: 7px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        li:before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border: 0.5px solid #455A64;
+            border-radius: 14px;
+            margin-right: 12px;
+            display: inline-block;
+        }
+    }
+
+    ol {
+        background: #F2F4F5;
+        border-radius: 3px;
+        padding: 13px 40px;
+
+        li {
+            line-height: 20px;
+            padding: 7px 0 0 10px;
+            font-size: 14px;
+            color: #3F4449;
+        }
+    }
+
+    ul,
+    ol,
+    p,
+    table {
+        em {
+            color: #8cade9;
+            font-style: normal;
+            padding: 0 2px;
+        }
+
+        strong {
+            display: inline-block;
+            background: #F7F7F7;
+            border: 0.5px solid #ECECEC;
+            border-radius: 2px;
+            font-size: 13px;
+            line-height: 1;
+            color: #3F536E;
+            padding: 3px 5px;
+            margin: 0 5px;
+        }
+    }
+
+    table {
+        width: 100%;
+        // border-collapse: collapse;
+
+        th {
+            background: #F7F7F7;
+            border: 0.5px solid #E9E9E9;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333333;
+            height: 40px;
+            padding: 0 20px 0 14px;
+            text-align: left;
+        }
+
+        td {
+            border: 0.5px solid #E9E9E9;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #3F4449;
+            height: 50px;
+            padding-left: 14px;
+        }
+    }
+
+    hr {
+        height: 1px;
+        border-width: 0;
+        background-color: #e7f0ff;
+    }
+
+    img[alt="flex"] {
+        flex-shrink: 0;
+        width: 50%;
+        padding: 0 15px;
+        flex-basis: auto;
+        flex: 1;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        font-size: 14px;
+        white-space: unset;
+        word-break: break-all;
+    }
+
+    a {
+        color: #5396ff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // 代码块样式***************start**********
+
+    pre {
+        position: relative;
+        max-width: 100%;
+        overflow: auto;
+
+        .code-wrapper {
+            width: 100%;
+            overflow: auto;
+        }
+
+        [toast='toast'],
+        [copy='copy'] {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            width: 16px;
+            height: 16px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.8;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        [toast='toast'] {
+            right: 10px;
+            background-image: url(./i/all.png);
+
+            &:hover {
+                background-color: #d5e5ff;
+            }
+        }
+
+        [copy='copy'] {
+            right: 40px;
+            background-image: url(./i/cp.png);
+
+            &:hover {
+                background-color: #d5e5ff;
+            }
+        }
+    }
+
+    pre {
+        position: relative;
+        background: #f2f4f5;
+        border-radius: 12px;
+        border: none;
+        padding: 20px;
+        margin: 0;
+
+        &>span {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-style: italic;
+            font-size: 8px;
+            color: #999;
+            text-shadow: 1px 1px #fff;
+            user-select: none;
+        }
+    }
+
+    .kwd {
+        color: #005cc5;
+    }
+
+    .pln {
+        color: #a74a4a;
+    }
+
+    .tag {
+        color: #288cff;
+    }
+
+    .atn {
+        color: #0dade4;
+    }
+
+    .pun {
+        color: #8276ff;
+    }
+
+    .atv {
+        color: #005cc5;
+    }
+
+    .com {
+        color: #055a2a;
+    }
+
+    .layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        background: #f2f4f5;
+        z-index: 9999;
+
+        .close-box {
+            color: #fff;
+            font-size: 24px;
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            z-index: 30;
+            width: 16px;
+            height: 16px;
+            background: url(../css/i/close.png) no-repeat center;
+            background-size: cover;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #d5e5ff;
+                background-image: url(../css/i/close.png);
+            }
+        }
+
+        [toast='toast'] {
+            display: none;
+        }
+
+        pre {
+            background: none;
+            padding: 0 30px;
+            max-width: 100%;
+            max-height: 800px;
+            overflow: auto;
+
+            &>i,
+            .lang {
+                display: none;
+            }
+        }
+    }
+
+    pre.prettyprint {
+        code {
+            font: 13px/24px Menlo, Gilroy, 'SFMono-Regular', Consolas, 'Liberation Mono', Courier, monospace;
+            font-weight: bold;
+        }
+    }
+
+    .icon-dongdong-small {
+        margin: 0 3px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 13px;
+        height: 13px;
+        background: url(//img12.360buyimg.com/jrpmobile/jfs/t1/24295/38/12622/735/5c9add5dE21fc42a9/1bb1557827496868.png) no-repeat;
+    }
+
+    // 代码块样式***************end**********
+
+
+    .h2box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footInfoBox {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px;
+
+        .updateTime {
+            line-height: 22px;
+            font-size: 14px;
+            font-family: PingFangHK-Medium;
+            font-weight: 500;
+            color: #CCCCCC;
+        }
+    }
+
+    .gitLink {
+        font-size: 14px;
+        color: #3E5CD7;
+
+        &:hover {
+            text-decoration: none;
+            color: #3E5CD7;
+        }
+
+        &::after {
+            border-color: #3E5CD7 !important;
+        }
+
+        .el-link--inner {
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        .gitIcon {
+            width: 15px;
+            height: 13px;
+            background-image: url(https://img14.360buyimg.com/imagetools/jfs/t1/199871/1/34448/644/646b2d8fF76de7406/bf92798f2d899c55.png);
+            background-size: 100% 100%;
+            margin-left: 5px;
+        }
+    }
+
+
+}
+
+// 设计文档要求定制的样式*****************start***************
+.design-language-doc {
+    overflow: hidden;
+    padding-left: 43px;
+    padding-right: 43px;
+
+    img {
+        width: 100%;
+    }
+
+    img[alt="间距"] {
+        width: 100%;
+        height: 64px;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    h2 {
+
+        font-weight: bold;
+        font-size: 24px;
+
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+
+
+    h5 {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 15px 0;
+        color: #333333;
+    }
+
+}
+
+.design-language-doc.space-between,
+.design-language-doc.color,
+.design-language-doc.rounded-corner,
+.design-language-doc.font,
+.design-language-doc.core-idea,
+.design-language-doc.kinetic-effect,
+.design-language-doc.design-strategy {
+    overflow: hidden;
+
+    h1 {
+        font-size: 40px;
+        clear: both;
+        margin: 0;
+        padding-bottom: 34px;
+    }
+
+    h3 {
+        margin: 0;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    p {
+        margin: 0;
+        padding-bottom: 20px;
+        font-size: 16px;
+    }
+
+
+
+    img[alt="间距"] {
+        display: none;
+    }
+}
+
+// 设计文档要求定制的样式*****************end***************
+
+
+// 更新日志定制的样式*****************start***************
+.updateLog {
+    display: flex;
+    flex-direction: column;
+
+    .gear-doc-card {
+        padding: 0 40px 40px 134px;
+        position: relative;
+
+        code {
+            font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+        }
+
+        &::before {
+            content: " ";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            background: rgba(245, 49, 55, 1);
+            border-radius: 100%;
+            border: 2px white solid;
+            left: 0;
+            top: 26px;
+            z-index: 1;
+        }
+
+        &::after {
+            content: " ";
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            // background-color: rgba(0, 0, 0, 0.06);
+            border-left: 1px dashed rgba(0, 0, 0, 0.06);
+            left: 5px;
+            top: 30px;
+            z-index: 0;
+        }
+
+        .left-box {
+            position: absolute;
+            left: 19px;
+            top: 20px;
+
+            h3 {
+                margin-top: 0;
+                font-weight: bold;
+                font-size: 20px;
+
+            }
+        }
+
+        h4{
+            font-size: 18px;
+            font-family: AppleColorEmoji; 
+        }
+
+        li {
+            display: list-item;
+            font-size: 14px;
+            color: #455A64;
+            padding: 7px 0;
+            margin-left: 23px;
+            line-height: 20px;
+            list-style-type: initial;
+        }
+
+        li:before {
+            content: none;
+        }
+    }
+
+    >div:nth-last-child(4) {
+        &::after {
+            width: 0;
+            height: 0;
+        }
+    }
+}
+
+
+
+// 更新日志定制的样式*****************end***************

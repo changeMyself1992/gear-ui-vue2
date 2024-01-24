@@ -1,0 +1,89 @@
+.gear-swipe {
+    position: relative;
+    overflow: hidden;
+    // https://github.com/youzan/vant/issues/9931
+    transform: translateZ(0);
+    cursor: grab;
+    user-select: none;
+
+    &__track {
+        display: flex;
+        height: 100%;
+
+        &--vertical {
+            flex-direction: column
+        }
+    }
+
+    &__indicators {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        display: flex;
+        transform: translateX(-50%);
+
+        &--relative {
+            position: relative;
+            bottom: 0;
+            padding-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        &--vertical {
+            top: 50%;
+            bottom: auto;
+            left: 12px;
+            flex-direction: column;
+            transform: translateY(-50%);
+        }
+
+
+    }
+
+    &__indicator {
+        width: 3px;
+        height: 3px;
+        background-color: #ebedf0;
+        border-radius: 100%;
+        opacity: 0.3;
+        transition: opacity 0.2s, background-color 0.2s;
+
+        &:not(:last-child) {
+            margin-right: 3px;
+        }
+
+        &--active {
+            background-color: #1989fa;
+            opacity: 1;
+
+            width: 10px;
+            border-radius: 2px;
+        }
+    }
+
+
+    &__indicatorVertical {
+        width: 6px;
+        height: 6px;
+        background-color: #ebedf0;
+        border-radius: 100%;
+        opacity: 0.3;
+        transition: opacity 0.2s, background-color 0.2s;
+        margin-bottom: 6px;
+
+        &:not(:last-child) {
+            margin-right: 6px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--active {
+            background-color: #1989fa;
+            opacity: 1;
+        }
+    }
+}

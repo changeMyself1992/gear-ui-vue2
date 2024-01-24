@@ -1,0 +1,37 @@
+// BEM规范，为的是结束混乱的命名方式，达到一个语义化的CSS命名方式。
+// BEM是三个单词的缩写：Block（块）代表更高级别的抽象或组件，Element（元素） Block的后代，以及Modifier（修饰） 不同状态的修饰符。
+// & 语法代表父选择器,sass在选择器嵌套上是非常智能的，即使是带有父选择器的情况。当sass遇到群组选择器（由多个逗号分隔开的选择器形成）也能完美地处理这种嵌套。
+// --modifier 是修饰的意思
+// __wrap 是块级元素的意思
+@import "../../assets/css/common/var";
+
+.gear-steps {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 4px;
+
+    &--horizontal {
+        padding: 20px $padding-sm 0 $padding-sm;
+
+        .gear-steps__items {
+            position: relative;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+    }
+
+    &--vertical {
+        padding: 30px $padding-sm;
+
+        .gear-steps__items {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow: hidden;
+        }
+
+    }
+}

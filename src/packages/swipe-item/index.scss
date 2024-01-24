@@ -1,0 +1,36 @@
+.gear-swipe-item {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes gear-SwipeItem-fade-in {
+
+    0% {
+        opacity: 0.3;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes gear-SwipeItem-fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}

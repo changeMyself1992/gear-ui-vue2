@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import "../../assets/css/common/var";
+@import "../../assets/css/common/mixin";
+
+.gear-radio-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+
+    .gear-radio-check {
+        position: absolute;
+        font-size: 16px;
+        color: $redTheme;
+        top: 50%;
+        transform: translateY(-50%);
+        right: $padding-md;
+    }
+
+    .circle {
+        width: 20px;
+        height: 20px;
+        margin-left: 12px;
+        margin-right: 10px;
+        // @include gear-border-1px($redTheme, 50%, 2px);
+        border: 1px solid $redTheme;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+
+    .circle-selected {
+        width: 20px;
+        height: 20px;
+        margin-left: 12px;
+        margin-right: 10px;
+        background-color: $redTheme;
+        border-radius: 50%;
+
+        font-size: 12px;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .circle-slot-box {
+        flex: 1;
+
+        .gear-list-item {
+            padding-left: 0;
+        }
+    }
+
+    .tick-slot-box {
+        flex: 1;
+    }
+
+    .equalizationLayout-slot-box {
+        flex: 1;
+        border: 1px solid #DDDDDD;
+        border-radius: 2px;
+        margin: 0 5px 10px 5px;
+        box-sizing: border-box;
+
+        &--active {
+            border-color: $redTheme;
+        }
+    }
+
+    .adaptiveLayout-slot-box {
+        min-width: 77.5px;
+        border: 1px solid #DDDDDD;
+        border-radius: 2px;
+        margin: 0 5px 10px 5px;
+        box-sizing: border-box;
+
+        &--active {
+            border-color: $redTheme;
+        }
+    }
+}

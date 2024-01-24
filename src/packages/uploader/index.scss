@@ -1,0 +1,220 @@
+// BEM规范，为的是结束混乱的命名方式，达到一个语义化的CSS命名方式。-delete
+// BEM是三个单词的缩写：Block（块）代表更高级别的抽象或组件，Element（元素） Block的后代，以及Modifier（修饰） 不同状态的修饰符。
+// & 语法代表父选择器,sass在选择器嵌套上是非常智能的，即使是带有父选择器的情况。当sass遇到群组选择器（由多个逗号分隔开的选择器形成）也能完美地处理这种嵌套。
+// --modifier 是修饰的意思
+// __wrap 是块级元素的意思
+.gear-uploader {
+    position: relative;
+    display: inline-block;
+    // width: 100%;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        &--disabled {
+            opacity: 0.5;
+        }
+    }
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; // to clip file-upload-button
+        cursor: pointer;
+        opacity: 0;
+        z-index: 10;
+        -webkit-tap-highlight-color: transparent;
+
+        &-wrapper {
+            position: relative;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    &__upload {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 82px;
+        height: 82px;
+        margin: 0 8px 8px 0;
+        background-color: rgba(0, 0, 0, 0.08);
+        border: 1px dashed #BBBBBB;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &:active {
+            background-color: #f2f3f5;
+        }
+
+        &--readonly:active {
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+
+        &--certificate {
+            border: none;
+            background-color: transparent;
+
+            &:active {
+                background-color: transparent;
+            }
+        }
+
+        &-icon {
+            color: #666666;
+            font-size: 24px;
+        }
+
+        &-certificate {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-slot {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            font-size: 0;
+        }
+
+        &-text {
+            margin-top: 3px;
+            color: #969799;
+            font-size: 12px;
+            transform: scale(0.83);
+            text-align: center;
+            white-space: pre-wrap;
+        }
+    }
+
+    &__preview {
+        position: relative;
+        margin: 0 8px 8px 0;
+        cursor: pointer;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &-image {
+            display: block;
+            width: 82px;
+            height: 82px;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        &-delete {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            z-index: 3;
+            font-size: 0;
+
+            &-img {
+                width: 9px;
+                height: 9px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &-change {
+            width: 72px;
+            height: 26px;
+            background: rgba(51, 51, 51, 1);
+            border-radius: 15px;
+            opacity: 0.8;
+
+            line-height: 26px;
+            font-size: 12px;
+            font-family: PingFangSC-Regular;
+            font-weight: normal;
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            z-index: 3;
+        }
+
+        &-cover {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background-color: rgba(50, 50, 51, 0.88);
+        z-index: 2;
+
+        &-icon {
+            font-size: 22px;
+        }
+
+        &-message {
+            margin-top: 10px;
+            line-height: 23px;
+            font-size: 16px;
+            font-family: PingFangSC-Semibold;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+    }
+
+    &__loading {}
+
+    &__file {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 82px;
+        height: 82px;
+        background-color: rgba(0, 0, 0, 0.08);
+
+        &-icon {
+            color: #646566;
+            font-size: 20px;
+        }
+
+        &-name {
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 8px;
+            padding: 0 4px;
+            color: #646566;
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+/build/
+release/
+build/
+node_modules/
+__test__
+static
+/packages/config/
+/esm/*
+/lib/*

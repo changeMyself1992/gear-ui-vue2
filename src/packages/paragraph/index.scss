@@ -1,0 +1,28 @@
+@import "../../assets/css/common/var";
+
+// &是父选择器的占位符
+.gear-paragraph {
+    width: 100%;
+    font-size: 0;
+
+    .real-text {
+        display: inline;
+        line-height: 23px;
+        font-size: 16px;
+        font-family: PingFangSC-Regular;
+        font-weight: normal;
+        color: $blackTheme1;
+    }
+
+    .slot-box {
+        display: inline;
+        cursor: pointer;
+        line-height: 23px;
+        font-size: 16px;
+        font-family: PingFangSC-Regular;
+        font-weight: normal;
+        color: #3E5CD7;
+        white-space: nowrap;
+        -webkit-tap-highlight-color: transparent;
+    }
+}

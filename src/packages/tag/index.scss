@@ -1,0 +1,104 @@
+@import "../../assets/css/common/mixin";
+
+.gear-tag {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 4px;
+    margin-right: 14px;
+
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 2px;
+    font-family: PingFangSC-Medium;
+    box-sizing: border-box;
+
+    &--default {
+        background-color: #969799;
+
+        &.gear-tag--plain {
+            color: #969799;
+        }
+    }
+
+    &--danger {
+        background-color: #ee0a24;
+
+        &.gear-tag--plain {
+            color: #ee0a24;
+        }
+    }
+
+    &--primary {
+        background-color: #1989fa;
+
+        &.gear-tag--plain {
+            color: #1989fa;
+        }
+    }
+
+    &--success {
+        background-color: #07c160;
+
+        &.gear-tag--plain {
+            color: #07c160;
+        }
+    }
+
+    &--warning {
+        background-color: #ff976a;
+
+        &.gear-tag--plain {
+            color: #ff976a;
+        }
+    }
+
+    &--plain {
+        background-color: transparent;
+        border-color: currentColor;
+        border-radius: 2px;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: 1px solid;
+            border-color: inherit;
+            border-radius: inherit;
+            content: "";
+            pointer-events: none;
+        }
+    }
+
+    &--medium {
+        padding: 2px 6px;
+    }
+
+    &--large {
+        padding: 4px 8px;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    &--mark {
+        border-radius: 0 999px 999px 0;
+
+        &::after {
+            display: block;
+            width: 2px;
+            content: "";
+        }
+    }
+
+    &--round {
+        border-radius: 999px;
+    }
+
+    &__close {
+        margin-left: 2px;
+        cursor: pointer;
+    }
+}

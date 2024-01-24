@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+.btn1 {
+	width: 318px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	background: rgba(255, 255, 255, 1) !important;
+	border-radius: 25px !important;
+
+	font-size: 16px !important;
+	font-family: PingFangSC-Semibold !important;
+	font-weight: bold !important;
+	color: #333333 !important;
+	margin-bottom: 16px !important;
+	box-sizing: border-box;
+}
+
+.section-title {
+	margin: 24px 0 9px 0;
+	text-align: center;
+	font-size: 14px;
+	font-family: PingFangSC-Semibold;
+	font-weight: bold;
+	color: #999999;
+	line-height: 20px;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+@mixin gear-border-bottom($color: #eeeeee, $left: 0, $right: 0) {
+	position: relative;
+
+	&::after {
+		content: " ";
+		position: absolute;
+		display: block;
+		transform-origin: bottom;
+		z-index: 0;
+		left: $left;
+		right: $right;
+		bottom: 0;
+		border-bottom: 1px solid $color;
+
+		@media (-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 2dppx) {
+			transform: scaleY(0.5);
+		}
+
+		@media (-webkit-min-device-pixel-ratio: 3),
+		(min-resolution: 3dppx) {
+			transform: scaleY(0.333333);
+		}
+	}
+}
+
+
+// Padding
+$padding-base: 4px;
+$padding-xs: $padding-base * 2;
+$padding-sm: $padding-base * 3;
+$padding-md: $padding-base * 4;
+$padding-lg: $padding-base * 6;
+$padding-xl: $padding-base * 8;
+
+// 红色
+$red: #f52f3e;
+$redDark: #de2b38;
+$redDisabled: #feadb3;
+$redTheme: #F53137;
+
+//黑色
+$blackTheme1: #000000;
+$blackTheme2: #333333;

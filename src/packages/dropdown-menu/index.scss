@@ -1,0 +1,96 @@
+// BEM规范，为的是结束混乱的命名方式，达到一个语义化的CSS命名方式。-delete
+// BEM是三个单词的缩写：Block（块）代表更高级别的抽象或组件，Element（元素） Block的后代，以及Modifier（修饰） 不同状态的修饰符。
+// & 语法代表父选择器,sass在选择器嵌套上是非常智能的，即使是带有父选择器的情况。当sass遇到群组选择器（由多个逗号分隔开的选择器形成）也能完美地处理这种嵌套。
+// --modifier 是修饰的意思
+// __wrap 是块级元素的意思
+@import '../../assets/css/common/var';
+
+.gear-dropdown-menu {
+    user-select: none;
+
+    &__bar {
+        position: relative;
+        display: flex;
+        height: 50px;
+        background-color: #fff;
+
+        &--opened {
+            z-index: 11;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        min-width: 0; // hack for flex ellipsis
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+
+        &:active {
+            opacity: 0.7;
+        }
+
+        &--disabled {
+            &:active {
+                opacity: 1;
+            }
+
+            .gear-dropdown-menu__title {
+                color: #969799;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__title {
+        position: relative;
+        box-sizing: border-box;
+        max-width: 100%;
+        padding: 0 8px;
+        line-height: 20px;
+        font-size: 14px;
+        color: #666666;
+        font-family: PingFangSC-Medium;
+        font-weight: bold;
+
+
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: -4px;
+            margin-top: -5px;
+            border: 3px solid;
+            border-color: transparent transparent #dcdee0 #dcdee0;
+            transform: rotate(-45deg);
+            opacity: 0.8;
+            content: '';
+        }
+
+        &--active {
+            color: $redTheme;
+
+            &::after {
+                border-color: transparent transparent currentColor currentColor;
+            }
+        }
+
+        &--down {
+            &::after {
+                margin-top: -1px;
+                transform: rotate(135deg);
+            }
+        }
+    }
+}
+
+.gear-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

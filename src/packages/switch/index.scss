@@ -1,0 +1,125 @@
+$gear-switch-disable-color: #b9d1f8;
+@import '../../assets/css/common/var';
+
+.gear-field-switch {
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+.gear-switch {
+    position: relative;
+    font-size: 0;
+    display: inline-block;
+    width: 100%;
+
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+
+    &__show {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        position: relative;
+        border-radius: 16px;
+        box-sizing: border-box;
+        background-color: #CCCCCC;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            z-index: 1;
+            transform: scale(1);
+            border-radius: 16px;
+            background: #cccccc;
+            transition: all 200ms ease 0s;
+        }
+    }
+
+    &__node {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        z-index: 2;
+        border-radius: 999px;
+        background: #FFFFFF;
+        transition: all 200ms ease 0s;
+    }
+
+    &__loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        appearance: none;
+        border: 0px;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+
+    &--large {
+        width: 49px;
+        height: 28px;
+
+        .gear-local-loading__spinner {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &--large &__node {
+        height: 21px;
+        width: 21px;
+        transform: translate(4px, -50%);
+    }
+
+
+    &--small {
+        width: 28px;
+        height: 16px;
+
+        .gear-local-loading__spinner {
+            width: 9px;
+            height: 9px;
+        }
+    }
+
+    &--small &__node {
+        height: 12px;
+        width: 12px;
+        transform: translate(2px, -50%);
+    }
+
+    &--checked &__show {
+        border-color: $redTheme;
+        background-color: $redTheme;
+    }
+
+    &--checked &__show::before {
+        transform: scale(0);
+    }
+
+    &--checked.gear-switch--large &__show &__node {
+        transform: translate(24px, -50%);
+    }
+
+    &--checked.gear-switch--small &__show &__node {
+        transform: translate(14px, -50%);
+    }
+
+    &--disable &__show {
+        opacity: 0.4;
+    }
+
+    &--loading &__show {
+        opacity: 0.4;
+    }
+
+}

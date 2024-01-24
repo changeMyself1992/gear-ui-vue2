@@ -1,0 +1,29 @@
+// ---- color ----
+$primary-color: #f0250f !default;
+
+// ---- base ----
+$font-family: 'PingFangSC-Regular', 'Helvetica Neue', Helvetica, STHeiTi, sans-serif !default;
+$mask-bg: rgba(0, 0, 0, 0.5) !default;
+
+// ---- Animation ----
+$animation-duration: 0.25s !default;
+$transition-duration: 0.2s !default;
+$transition-duration-fast: 0.2s !default;
+$transition-duration-slow: 0.4s !default;
+$animation-timing-fun: cubic-bezier(0.55, 0.085, 0.68, 0.53) !default;
+$ease-in-out: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$ease-out: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+// ---- Border color ----
+
+// ---- Disabled ----
+
+// ---- Shadow ----
+
+// ---- Buttons ----
+
+// ---- z-index ----
+$zindex-mask: 9998 !default;
+$zindex-dialog: 10000 !default;
+// ---- Assets path ----
+// ---- Stepper ----

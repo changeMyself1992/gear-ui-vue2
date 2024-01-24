@@ -1,0 +1,499 @@
+{
+  "sortsEname": [
+    "base-component",
+    "display-component",
+    "operational-feedback",
+    "navigation-component",
+    "data-entry"
+  ],
+  "sorts": [
+    "基础组件",
+    "展示组件",
+    "操作反馈",
+    "导航组件",
+    "数据录入"
+  ],
+  "packages": [
+    {
+      "name": "Button",
+      "ui-specified-english-name": "Button",
+      "chnName": "按钮",
+      "desc": "按钮组件",
+      "sort": "0",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+    {
+      "name": "Form",
+      "ui-specified-english-name": "Form",
+      "chnName": "表单",
+      "desc": "",
+      "sort": "0",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/9/08 10:09:48",
+      "subPage": [
+        {
+          "router": "form-card",
+          "chnName": "卡片表单"
+        },
+        {
+          "router": "form-banner",
+          "chnName": "通栏表单"
+        }
+      ]
+    },
+    {
+      "name": "show-demo",
+      "ui-specified-english-name": "Label",
+      "chnName": "红点、标签、气泡",
+      "desc": "这儿展示的是三个组件，徽标，标签，和气泡卡片",
+      "sort": "0",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+    {
+      "name": "Swipe",
+      "ui-specified-english-name": "PageBreak",
+      "chnName": "分页符",
+      "desc": "",
+      "sort": "0",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/9/08 10:09:48"
+    },
+    {
+      "name": "Dialog",
+      "ui-specified-english-name": "Dialog",
+      "chnName": "弹窗",
+      "desc": "对话框组件",
+      "sort": "0",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/6/26 10:09:48"
+    },
+    {
+      "name": "overlay",
+      "ui-specified-english-name": "Mask",
+      "chnName": "遮罩",
+      "desc": "遮罩組件",
+      "sort": "0",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+    {
+      "name": "grid",
+      "ui-specified-english-name": "QuickLink",
+      "chnName": "图标宫格",
+      "desc": "宫格可以在水平方向上把页面分隔成等宽度的区块，用于展示内容或进行页面导航。",
+      "sort": "1",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48",
+      "subPage": [
+        {
+          "router": "grid-dome1",
+          "chnName": "金刚区样式"
+        },
+        {
+          "router": "grid-dome2",
+          "chnName": "卡片样式"
+        }
+      ]
+    },
+    {
+      "name": "bully-screen-icon",
+      "ui-specified-english-name": "Suspended",
+      "chnName": "悬浮图标",
+      "desc": "固定屏幕的角标显示",
+      "sort": "1",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48",
+      "subPage": [
+        {
+          "router": "bully-screen-icon-dome1",
+          "chnName": "返回顶部"
+        },
+        {
+          "router": "bully-screen-icon-dome2",
+          "chnName": "运营图标"
+        },
+        {
+          "router": "bully-screen-icon-dome3",
+          "chnName": "广告运营图标"
+        }
+      ]
+    },
+    {
+      "name": "SearchBar",
+      "ui-specified-english-name": "SearchBar",
+      "chnName": "搜索框",
+      "desc": "常用的搜索框样式",
+      "sort": "1",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+    {
+      "name": "Notice",
+      "ui-specified-english-name": "Notice",
+      "chnName": "公告",
+      "desc": "用于循环播放展示一组消息通知。",
+      "sort": "1",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/8/11 11:22:15"
+    },
+    {
+      "name": "floor-notice",
+      "ui-specified-english-name": "FloorNotice",
+      "chnName": "楼层公告",
+      "desc": "用于循环播放展示一组消息通知。",
+      "sort": "1",
+      "author": "ext.menghao1"
+    },
+    {
+      "name": "steps",
+      "ui-specified-english-name": "Progress",
+      "chnName": "进度",
+      "desc": "用于展示操作流程的各个环节，让用户了解当前的操作在整体流程中的位置。",
+      "sort": "1",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48",
+      "subPage": [
+        {
+          "router": "steps-dome1",
+          "chnName": "竖向样式"
+        },
+        {
+          "router": "steps-dome2",
+          "chnName": "横向样式"
+        }
+      ]
+    },
+    {
+      "name": "consent-agreement",
+      "ui-specified-english-name": "Agreement",
+      "chnName": "同意协议",
+      "desc": "同意协议",
+      "sort": "1",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/9/08 10:09:48"
+    },
+    {
+      "name": "image-compress",
+      "ui-specified-english-name": "DefaultImage",
+      "chnName": "兜底图",
+      "desc": "图片组件(新) - 在Image组件基础上添加了对京东云图片进行压缩格式转换",
+      "sort": "1",
+      "author": "zhangjinglei6",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+    {
+      "name": "Footer",
+      "ui-specified-english-name": "Footer",
+      "chnName": "页脚",
+      "desc": "统一页脚组件",
+      "sort": "1",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48",
+      "subPage": [
+        {
+          "router": "footer-type1",
+          "chnName": "品牌+业务利益点+业务说明"
+        },
+        {
+          "router": "footer-type2",
+          "chnName": "品牌+业务说明"
+        },
+        {
+          "router": "footer-type3",
+          "chnName": "品牌 A"
+        },
+        {
+          "router": "footer-type4",
+          "chnName": "品牌 B"
+        }
+      ]
+    },
+    {
+      "name": "countDown",
+      "ui-specified-english-name": "CountDown",
+      "chnName": "倒计时",
+      "desc": "倒计时组件",
+      "sort": "1",
+      "author": "mengmeiqi",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+    {
+      "name": "paragraph",
+      "ui-specified-english-name": "Paragraph",
+      "chnName": "文本省略",
+      "desc": "文本省略。",
+      "sort": "1",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+    {
+      "name": "Empty",
+      "ui-specified-english-name": "EmptyState",
+      "chnName": "空状态",
+      "desc": "",
+      "sort": "1",
+      "author": "furuixing1",
+      "docUpdateTime": "2023/5/24 10:09:48",
+      "subPage": [
+        {
+          "router": "network",
+          "chnName": "无网络"
+        },
+        {
+          "router": "default",
+          "chnName": "加载失败"
+        },
+        {
+          "router": "no-comment",
+          "chnName": "无评论"
+        },
+        {
+          "router": "no-goods",
+          "chnName": "购物车为空"
+        },
+        {
+          "router": "no-coupon",
+          "chnName": "无优惠券"
+        },
+        {
+          "router": "activity-end",
+          "chnName": "活动结束"
+        },
+        {
+          "router": "no-btn",
+          "chnName": "无按钮"
+        },
+        {
+          "router": "one-btn",
+          "chnName": "有一个按钮"
+        },
+        {
+          "router": "two-btn",
+          "chnName": "有两个按钮"
+        }
+      ]
+    },
+    {
+      "name": "detail-page",
+      "ui-specified-english-name": "DetailPage",
+      "chnName": "详情页",
+      "desc": "一种用于显示某个产品或信息的详细信息的页面",
+      "sort": "1",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/7/03 10:09:48"
+    },
+    {
+      "name": "ground-glass",
+      "ui-specified-english-name": "GroundGlass",
+      "chnName": "背景模糊",
+      "desc": "",
+      "sort": "1",
+      "author": "ext.zhangjiaqi1",
+      "docUpdateTime": "2023/8/10 15:26:00"
+    },
+    {
+      "name": "pull-refresh",
+      "ui-specified-english-name": "PullToRefresh",
+      "chnName": "下拉刷新",
+      "desc": "下拉刷新组件",
+      "sort": "2",
+      "author": "furuixing1",
+      "docUpdateTime": "2023/5/24 10:09:48",
+      "subPage": [
+        {
+          "router": "pull-refresh-0",
+          "chnName": "深色背景"
+        },
+        {
+          "router": "pull-refresh-1",
+          "chnName": "浅色背景"
+        }
+      ]
+    },
+    {
+      "name": "Loading",
+      "ui-specified-english-name": "TransitionLoading",
+      "chnName": "转场加载",
+      "desc": "转场loading",
+      "sort": "2",
+      "author": "furuixing1",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+    {
+      "name": "slide-load",
+      "ui-specified-english-name": "FeedLoading",
+      "chnName": "信息流加载",
+      "desc": "上拉加载",
+      "sort": "2",
+      "author": "furuixing1",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+    {
+      "name": "Toast",
+      "ui-specified-english-name": "Toast",
+      "chnName": "轻提示",
+      "desc": "提示組件",
+      "sort": "2",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+    {
+      "name": "free-popup",
+      "ui-specified-english-name": "DropDown",
+      "chnName": "底部弹出菜单",
+      "desc": "",
+      "sort": "2",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/9/08 10:09:48"
+    },
+    {
+      "name": "Switch",
+      "ui-specified-english-name": "Switch",
+      "chnName": "开关",
+      "desc": "",
+      "sort": "2",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/9/08 15:51:00"
+    },
+    {
+      "name": "tab-bar",
+      "ui-specified-english-name": "TabBar",
+      "chnName": "底部导航栏",
+      "desc": "底部导航栏",
+      "sort": "3",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/6/26 10:09:48"
+    },
+    {
+      "name": "Tabs",
+      "ui-specified-english-name": "Tab",
+      "chnName": "切换标签",
+      "desc": "",
+      "sort": "3",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/9/08 10:09:48",
+      "subPage": [
+        {
+          "router": "tabs-dome1",
+          "chnName": "置顶标签固定2类目"
+        },
+        {
+          "router": "tabs-dome2",
+          "chnName": "置顶标签固定3类目"
+        },
+        {
+          "router": "tabs-dome3",
+          "chnName": "置顶标签多类目"
+        },
+        {
+          "router": "tabs-dome4",
+          "chnName": "独立楼层标签切换 "
+        },
+        {
+          "router": "tabs-dome5",
+          "chnName": "独立楼层标题切换"
+        },
+        {
+          "router": "tabs-dome6",
+          "chnName": "标题切换"
+        },
+        {
+          "router": "tabs-dome7",
+          "chnName": "标签切换"
+        },
+        {
+          "router": "tabs-dome8",
+          "chnName": "标题+标签切换"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "ui-specified-english-name": "DropdownMenu",
+      "chnName": "下拉菜单",
+      "desc": "向下弹出的菜单列表。",
+      "sort": "3",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+
+    {
+      "name": "index-bar",
+      "ui-specified-english-name": "IndexBar",
+      "chnName": "索引序列",
+      "desc": "索引栏组件",
+      "sort": "3",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48",
+      "subPage": [
+        {
+          "router": "indexBar-dome1",
+          "chnName": "基础用法"
+        },
+        {
+          "router": "indexBar-dome2",
+          "chnName": "自定义索引用法"
+        }
+      ]
+    },
+    {
+      "name": "Popover",
+      "ui-specified-english-name": "Popover",
+      "chnName": "抽屉菜单",
+      "desc": "弹出式的气泡菜单。",
+      "sort": "3",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/9/08 10:09:48"
+    },
+
+    {
+      "name": "dates-selecter",
+      "ui-specified-english-name": "TimePicker",
+      "chnName": "时间选择",
+      "desc": "支持年月日时间选择",
+      "sort": "4",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48"
+    },
+    {
+      "name": "Input",
+      "ui-specified-english-name": "Input",
+      "chnName": "输入框",
+      "desc": "对原生input的封装",
+      "sort": "4",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48",
+      "subPage": [
+        {
+          "router": "input-card",
+          "chnName": "卡片输入框"
+        },
+        {
+          "router": "input-banner",
+          "chnName": "通栏输入框"
+        }
+      ]
+    },
+    {
+      "name": "uploader",
+      "ui-specified-english-name": "ImageUploader",
+      "chnName": "图片上传",
+      "desc": "用于将本地的图片或文件上传至服务器，并在上传过程中展示预览图和上传进度。目前 Uploader 组件不包含将文件上传至服务器的接口逻辑，该步骤需要自行实现。",
+      "sort": "4",
+      "author": "ext.menghao1",
+      "docUpdateTime": "2023/5/24 10:09:48",
+      "subPage": [
+        {
+          "router": "uploader-dome1",
+          "chnName": "普通图片"
+        },
+        {
+          "router": "uploader-dome2",
+          "chnName": "证件图片"
+        }
+      ]
+    }
+  ]
+}

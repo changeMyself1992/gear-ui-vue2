@@ -1,0 +1,164 @@
+@import '../../assets/css/common/var';
+
+.gear-dropdown-item {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  overflow: hidden;
+
+  &__icon {
+    display: block;
+    line-height: inherit;
+  }
+
+  &__option {
+    text-align: left;
+
+    &--active {
+      color: #ee0a24;
+
+      .gear-dropdown-item__icon {
+        color: #ee0a24;
+      }
+    }
+  }
+
+  &__text {
+    line-height: 56px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: normal;
+    color: #666666;
+    padding-left: $padding-sm;
+
+    &--active {
+      color: $redTheme;
+      font-weight: bold;
+    }
+  }
+
+  &__equalizationLayout,
+  &__adaptiveLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 7px 20px 7px;
+  }
+
+  &__equalizationText {
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: normal;
+    color: #666666;
+    line-height: 34px;
+    text-align: center;
+    padding: 0 10px;
+    white-space: nowrap;
+
+    &--active {
+      color: $redTheme;
+
+    }
+
+  }
+
+  &__datetimerange {
+    padding: 10px 7px 20px 7px;
+  }
+
+  &__timeTitle {
+    line-height: 20px;
+    font-size: 14px;
+    font-family: PingFangSC-Medium;
+    font-weight: bold;
+    color: $blackTheme1;
+    margin: 0 0 20px 5px;
+  }
+
+  &__timeRange {
+    padding: 0 5px;
+    display: flex;
+    width: 100%;
+    // align-items: center;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+  }
+
+  &__inputBox {
+    flex: 1;
+    margin-bottom: 8px;
+    position: relative;
+
+    &::before {
+      display: block;
+      content: " ";
+      position: absolute;
+      width: 100%;
+      bottom: -8px;
+      left: 0;
+      border-bottom: 1px solid #EEEEEE;
+    }
+  }
+
+  &__timeInput {
+    width: 100%;
+    appearance: none;
+    border: none;
+    outline: none;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+
+
+    font-size: 16px;
+    font-family: PingFangSC-Medium;
+    font-weight: bold;
+    color: $blackTheme1;
+    -webkit-tap-highlight-color: transparent;
+
+    &::placeholder {
+      color: #CCCCCC;
+    }
+  }
+
+  &__zhi {
+    line-height: 17px;
+    font-size: $padding-sm;
+    font-family: PingFangSC-Regular;
+    font-weight: normal;
+    color: #666666;
+    width: 30px;
+    text-align: center;
+    line-height: 23px;
+  }
+
+  &__pickerOptionsLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 28px 0 0 0;
+  }
+
+
+
+
+  &--up {
+    top: 0;
+  }
+
+  &--down {
+    bottom: 0;
+  }
+
+  &__content {
+    position: absolute !important;
+    max-height: 80% !important;
+  }
+
+  .gear-free-popup--top {
+    top: -1px;
+  }
+}

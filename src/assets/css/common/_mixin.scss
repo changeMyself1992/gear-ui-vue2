@@ -1,0 +1,148 @@
+@charset "utf-8";
+// @import "//at.alicdn.com/t/font_3152209_3ek3gwehc37.css"; // 字体图标都维护在阿里 iconfont平台
+// @import "~@/assets/font/iconfont.css";
+@import "./../../font/iconfont.scss";
+
+@mixin gear-border-1px($color: #eeeeee, $radius: 2px, $border: 1px) {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: " ";
+    position: absolute;
+    pointer-events: none;
+    backface-visibility: hidden;
+    transform-origin: left top;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    border: $border solid $color;
+    border-radius: $radius;
+
+    @media (-webkit-min-device-pixel-ratio: 1),
+    (min-resolution: 1dppx) {
+      right: 0;
+      bottom: 0;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx) {
+      border-radius: $radius * 2;
+      right: -100%;
+      bottom: -100%;
+      transform: scale(0.5);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 3dppx) {
+      border-radius: $radius * 3;
+      right: -200%;
+      bottom: -200%;
+      transform: scale(0.333333);
+    }
+  }
+}
+
+@mixin gear-border-top($color: #eeeeee, $left: 0, $right: 0) {
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    transform-origin: top;
+    z-index: 0;
+    left: $left;
+    right: $right;
+    top: 0;
+    border-top: 1px solid $color;
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx) {
+      transform: scaleY(0.5);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 3dppx) {
+      transform: scaleY(0.333333);
+    }
+  }
+}
+
+@mixin gear-border-right($color: #eeeeee, $top: 0, $bottom: 0) {
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    transform-origin: right;
+    z-index: 0;
+    right: 0;
+    bottom: $bottom;
+    top: $top;
+    border-right: 1px solid $color;
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx) {
+      transform: scaleX(0.5);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 3dppx) {
+      transform: scaleX(0.333333);
+    }
+  }
+}
+
+@mixin gear-border-bottom($color: #eeeeee, $left: 0, $right: 0) {
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    transform-origin: bottom;
+    z-index: 0;
+    left: $left;
+    right: $right;
+    bottom: 0;
+    border-bottom: 1px solid $color;
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx) {
+      transform: scaleY(0.5);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 3dppx) {
+      transform: scaleY(0.333333);
+    }
+  }
+}
+
+@mixin gear-border-left($color: #eeeeee, $top: 0) {
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    transform-origin: left;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    top: $top;
+    border-left: 1px solid $color;
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx) {
+      transform: scaleX(0.5);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 3dppx) {
+      transform: scaleX(0.333333);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../assets/css/common/mixin";
+@import "../../assets/css/common/var";
+
+.gear-popup-header {
+    @include gear-border-bottom();
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 $padding-sm;
+    position: relative;
+    min-height: 60px;
+
+    .gear-popup-main-title {
+        display: flex;
+        line-height: 25px;
+        margin-top: 18px;
+
+        p {
+            font-family: PingFangSC-Medium;
+            font-size: 18px;
+            color: $blackTheme1;
+            letter-spacing: 0;
+            text-align: center;
+            flex: 1;
+        }
+
+        .close {
+            position: absolute;
+            right: $padding-md;
+            font-size: 14px;
+            color: #cccccc;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .back {
+            position: absolute;
+            left: 0px;
+            font-size: 44px;
+            color: #cccccc;
+        }
+    }
+
+    .gear-popup-sub-title {
+        font-family: PingFangSC-Regular;
+        font-size: 13px;
+        line-height: 20px;
+        color: #999999;
+        text-align: center;
+        margin: 2px 0 15px 0;
+    }
+}

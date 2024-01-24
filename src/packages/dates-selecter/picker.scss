@@ -1,0 +1,38 @@
+// 这里的单位必须是PX不允许做浏览器适配，因为picker组件的拖动是往标签样式上写TOPpx， 而标签样式无法自动加适配
+// 那我们这里做组件又不确定要不要给用户加适配，用户的设计图尺寸是多少
+.gear-select-date-scroller dl {
+    margin-top: 45PX;
+    width: 100%;
+}
+
+.gear-select-date-scroller dl dd.focus {
+    font-size: 18PX;
+    color: #e22319;
+}
+
+.gear-select-date-scroller dd {
+    font-family: PingFangSC-Regular;
+    width: 100%;
+    height: 45PX;
+    line-height: 45PX;
+}
+
+.gear-select-date-scroller-n dl {
+    margin-top: 98PX;
+    width: 100%;
+}
+
+.gear-select-date-scroller-n dl dd.focus {
+    font-size: 18PX;
+    color: #e22319;
+    font-weight: bold;
+}
+
+.gear-select-date-scroller-n dd {
+    font-family: PingFangSC-Medium;
+    width: 100%;
+    height: 49PX;
+    line-height: 49PX;
+    color: #999;
+    font-size: 17px;
+}

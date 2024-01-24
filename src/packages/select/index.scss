@@ -1,0 +1,53 @@
+.gear-select-icon {
+    &:after {
+        content: "";
+        display: block;
+        height: 12px;
+        width: 12px;
+        right: 16px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANZJREFUSA3N1LEVwiAQgOFAJnAiW0vr9NDoCnaOEAugs2QKt3AMNwDvChqfXA64IjR5L/D+j+SFTNMeh/f+yN2X5i4s65xza875FUK4lHvUtRnQWr8xmFJaOYii9NochhHAeQCvxphHbW0XgDEu0g1wkSGAgwwDW4gIQCFiQA0RBf4hzQcNI9SA8/GB+YRr4MQfRAH4jSxKqSe0NVxv1tq72Csqcdj1XOL4FCJALS4CUPFhYCs+BHDi3QA33gW0xBFoPgfwCZ5+P0UMiY0Y4wxPcRYLjoa+872d9nrgfKMAAAAASUVORK5CYII=) no-repeat;
+        background-size: cover;
+    }
+}
+
+.gear-field {
+    .gear-select-show {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        right: 30px;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-family: PingFangSC-Medium;
+        line-height: 28px;
+        padding-bottom: 14px;
+        letter-spacing: 0;
+        padding-right: 12px;
+    }
+
+    .gear-field-hasvalue {
+        position: relative;
+        right: 0;
+    }
+}
+
+.gear-field-inline {
+    .gear-field-select {
+        display: flex;
+        align-items: center;
+    }
+
+    .gear-select-show {
+        flex: 1;
+        padding: 16px 16px 16px 0;
+        font-size: 12px;
+        text-align: right;
+        font-family: PingFangSC-Regular;
+    }
+}

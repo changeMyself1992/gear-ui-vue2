@@ -1,0 +1,14 @@
+@import "../../assets/css/common/var";
+
+.gear-cell-item {
+    position: relative;
+
+    .gear-cell-check {
+        position: absolute;
+        font-size: 15px;
+        color: $redTheme;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+    }
+}

@@ -1,0 +1,153 @@
+@charset "utf-8";
+@import "../../assets/css/common/var", "../../assets/css/common/mixin";
+
+
+
+.gear-dialog-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gear-dialog {
+    position: relative;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    .iconClose {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 14px;
+        color: #cccccc;
+    }
+}
+
+
+
+.gear-dialog-inner {
+    .title {
+        font-family: "PingFangSC-Medium";
+        font-size: 19px;
+        color: $blackTheme1;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .title-size1 {
+        font-size: 17px
+    }
+}
+
+.gear-dialog-content {
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: normal;
+    color: #666666;
+    padding-top: 12px;
+    position: relative;
+}
+
+
+.gear-dialog-btns {
+
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    // width: 100%;
+    padding-top: 24px;
+    justify-content: center;
+
+
+    &--double {
+        justify-content: space-between;
+    }
+
+    .gear-dialog-btn {
+        height: 44px;
+        line-height: 44px;
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    // 这俩个按钮宽度必须这样写！！！ width: calc();使用计算减一下
+    // 如果这样写width: 122px; 在iphone12pro max 按钮就挤到一块了
+    // 实在是想不通原因，300-24-24 减去padding就是252px呀！！！gear-dialog-btns 设置宽度100%
+    // 那它也就是252px呀！！！！然后按钮设置122px，俩按钮加起来才244px 按理说不可能挤到一起的，即使px转vw单位后也不因该挤到一起啊
+    // 但是在这个iphone12pro max手机上就是挤到一起了
+    .btn-double {
+        // width: 122px;
+        width: calc(50% - 4px);
+    }
+
+    .btn-one {
+        // width: 215px;
+        width: calc(100% - 38px);
+    }
+}
+
+
+
+
+/**********************************************************/
+
+
+.gear-btn {
+    flex: 1;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+
+
+.gear-cancel-btn {
+    color: #666;
+}
+
+.gear-primary-btn {
+    color: $redTheme;
+}
+
+
+
+@media only screen and (min-device-width: 414px) and (-webkit-min-device-pixel-ratio: 3) {
+    .gear-dialog {
+        width: 308px;
+    }
+}
+
+// 内容进入的动画*********start
+.fade-enter-active {
+    animation-name: gear-dialogIn;
+    animation-duration: 0.3s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+}
+
+@keyframes gear-dialogIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// 内容进入的动画*********end

@@ -1,0 +1,141 @@
+// BEM规范，为的是结束混乱的命名方式，达到一个语义化的CSS命名方式。
+// BEM是三个单词的缩写：Block（块）代表更高级别的抽象或组件，Element（元素） Block的后代，以及Modifier（修饰） 不同状态的修饰符。
+// & 语法代表父选择器,sass在选择器嵌套上是非常智能的，即使是带有父选择器的情况。当sass遇到群组选择器（由多个逗号分隔开的选择器形成）也能完美地处理这种嵌套。
+// --modifier 是修饰的意思
+// __wrap 是块级元素的意思
+@import '../../assets/css/common/var';
+
+.gear-tabs {
+    position: relative;
+    width: 100%;
+    overflow-y: hidden;
+
+    &--line {
+        .gear-tabs__wrap {
+            height: 50px;
+        }
+    }
+
+    &__nav {
+        position: relative;
+        display: flex;
+        background-color: #fff;
+        user-select: none;
+
+        &--line {
+            box-sizing: content-box;
+            height: 100%;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+        z-index: 1;
+        width: 0px;
+        height: 3px;
+        transform: translateX(-50%);
+        background-color: $redTheme;
+    }
+
+    &__wrap {
+        overflow: hidden;
+
+        &--page-top {
+            position: fixed;
+        }
+
+        &--content-bottom {
+            top: auto;
+            bottom: 0;
+        }
+
+        &--scrollable {
+            .gear-tab {
+                flex: 1 0 auto;
+                padding: 0 12px;
+            }
+
+            .gear-tabs__nav {
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__content {
+        box-sizing: border-box;
+
+        &--animated {
+            overflow: hidden;
+        }
+    }
+
+    &__track {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        // padding: 0 12px;
+        will-change: left;
+    }
+
+    &__swipe {
+        width: 100%;
+    }
+
+    &__sticky {
+        position: fixed;
+        top: 40px;
+        right: 0;
+        left: 0;
+        z-index: 999;
+    }
+}
+
+.gear-tab {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 4px;
+    font-family: PingFangSC-Medium;
+    color: #999999;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &--active {
+        color: $blackTheme1;
+        font-weight: bold;
+    }
+
+    &--disabled {
+        color: #c8c9cc;
+        cursor: not-allowed;
+    }
+
+    &__text {
+        margin-top: 2.5px;
+
+        &--ellipsis {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    &__text-wrapper {
+        position: relative;
+    }
+}

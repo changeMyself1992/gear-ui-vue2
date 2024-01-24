@@ -1,0 +1,150 @@
+@import "../../assets/css/common/mixin";
+@import '../../assets/css/common/var';
+
+// 搜索框
+.search-box-1 {
+  width: 100%;
+  padding: 5px $padding-sm 7px;
+  background: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+
+  .search-no-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    line-height: 32px;
+    border-radius: 17px;
+    background: rgba(244, 245, 247, 1);
+
+    .search-svg {
+      width: 14px;
+      height: 14px;
+      margin: 0 4.5px 0 11.5px;
+    }
+
+    .search-icon {
+      font-size: 14px;
+      margin: 0 4.5px 0 11.5px;
+      color: #ccc;
+    }
+
+    .search-text {
+      line-height: 32px;
+      font-size: 12px;
+      font-family: PingFang SC;
+      font-weight: normal;
+      color: rgba(153, 153, 153, 1);
+    }
+  }
+}
+
+// 搜索框+1图标
+.search-box-2 {
+  width: 100%;
+  padding: 0 7px 0 $padding-sm;
+  background: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+
+  .search-one-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .search {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 17px;
+      background: rgba(244, 245, 247, 1);
+
+      .search-icon {
+        font-size: 14px;
+        margin: 0 4.5px 0 11.5px;
+        color: #ccc;
+      }
+
+      .search-text {
+        line-height: 32px;
+        font-size: 12px;
+        font-family: PingFang SC;
+        font-weight: normal;
+        color: rgba(153, 153, 153, 1);
+      }
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      margin-left: 5px;
+      // background: url('https://img14.360buyimg.com/imagetools/jfs/t1/110029/15/35178/329/63a16799E805abfcd/e7889442101bf605.png') no-repeat 0 0;
+      // background-size: 100% auto;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+}
+
+// 搜索框+2图标
+.search-box-3 {
+  width: 100%;
+  padding: 0 7px 0 $padding-sm;
+  background: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+
+  .search-two-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .search {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 17px;
+      background: rgba(244, 245, 247, 1);
+
+      .search-icon {
+        font-size: 14px;
+        margin: 0 4.5px 0 11.5px;
+        color: #ccc;
+      }
+
+      .search-text {
+        line-height: 32px;
+        font-size: 12px;
+        font-family: PingFang SC;
+        font-weight: normal;
+        color: rgba(153, 153, 153, 1);
+      }
+    }
+
+    .icon1 {
+      width: 44px;
+      height: 44px;
+      margin-left: 5px;
+      // background: url('https://img14.360buyimg.com/imagetools/jfs/t1/110029/15/35178/329/63a16799E805abfcd/e7889442101bf605.png') no-repeat 0 0;
+      // background-size: 100% auto;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    .icon2 {
+      width: 44px;
+      height: 44px;
+      // background: url('https://img14.360buyimg.com/imagetools/jfs/t1/110029/15/35178/329/63a16799E805abfcd/e7889442101bf605.png') no-repeat 0 0;
+      // background-size: 100% auto;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+}

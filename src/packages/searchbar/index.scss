@@ -1,0 +1,48 @@
+@import "../../assets/css/common/mixin";
+
+.gear-searchbar {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  .searchIcon {
+    color: #666666;
+    font-size: 13px;
+    margin-right: 6px;
+  }
+
+  &__placeholder {
+    flex: 1;
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    font-weight: normal;
+    color: #666666;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+  }
+
+  &__line {
+    width: 1px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.1);
+    margin-left: 23px;
+  }
+
+  &__text {
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 1);
+    margin-left: 8px;
+  }
+}
